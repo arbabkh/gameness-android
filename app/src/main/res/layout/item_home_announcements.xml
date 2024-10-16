@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:cardBackgroundColor="@color/almost_black"
+    app:cardCornerRadius="10dp"
+    app:cardUseCompatPadding="true"
+    tools:context=".ui.pages.personal.home.adapter.HomeAnnouncementsAdapter">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imageView_homeAnnouncement"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/announcements"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/welcome_bg"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/announcements"
+            android:textColor="@color/almost_black"
+            android:textAllCaps="false"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="20dp"
+            app:background="@drawable/ic_rectangle_radius5"
+            app:backgroundTint="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/textView_announcementTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            style="@style/header2"
+            android:textColor="@color/white"
+            android:maxLines="1"
+            app:autoSizeTextType="uniform"
+            app:autoSizeMaxTextSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/textView_announcementDescription"
+            app:layout_constraintEnd_toEndOf="@id/textView_announcementDescription"
+            app:layout_constraintBottom_toTopOf="@id/textView_announcementDescription"/>
+
+        <TextView
+            android:id="@+id/textView_announcementDescription"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mark_pro"
+            android:textColor="@color/white"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="50dp"
+            android:maxLines="1"
+            app:autoSizeTextType="uniform"
+            app:autoSizeMaxTextSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

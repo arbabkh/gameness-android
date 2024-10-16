@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_tournaments"
+    app:startDestination="@+id/tournamentsFragment">
+
+    <fragment
+        android:id="@+id/tournamentsFragment"
+        android:name="com.nuevo.gameness.ui.pages.personal.tournaments.TournamentsFragment"
+        android:label="fragment_tournaments"
+        tools:layout="@layout/fragment_tournaments" >
+        <action
+            android:id="@+id/action_tournamentsFragment_to_tournamentDetailFragment"
+            app:destination="@id/tournamentDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/tournamentDetailFragment"
+        android:name="com.nuevo.gameness.ui.pages.personal.tournaments.detail.TournamentDetailFragment"
+        android:label="fragment_tournament_detail"
+        tools:layout="@layout/fragment_tournament_detail" >
+        <action
+            android:id="@+id/action_tournamentDetailFragment_to_tournamentRoomHomeFragment"
+            app:destination="@id/tournamentRoomHomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/tournamentRoomHomeFragment"
+        android:name="com.nuevo.gameness.ui.pages.personal.tournaments.detail.tournamentroom.home.TournamentRoomHomeFragment"
+        android:label="fragment_tournament_room_home"
+        tools:layout="@layout/fragment_tournament_room_home" >
+        <action
+            android:id="@+id/action_tournamentRoomHomeFragment_to_playerChatFragment"
+            app:destination="@id/playerChatFragment" />
+        <action
+            android:id="@+id/action_tournamentRoomHomeFragment_to_refereeChatFragment"
+            app:destination="@id/refereeChatFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/playerChatFragment"
+        android:name="com.nuevo.gameness.ui.pages.personal.tournaments.detail.tournamentroom.playerchat.PlayerChatFragment"
+        android:label="fragment_player_chat"
+        tools:layout="@layout/fragment_player_chat" />
+    <fragment
+        android:id="@+id/refereeChatFragment"
+        android:name="com.nuevo.gameness.ui.pages.personal.tournaments.detail.tournamentroom.refereechat.RefereeChatFragment"
+        android:label="fragment_referee_chat"
+        tools:layout="@layout/fragment_referee_chat" />
+
+</navigation>

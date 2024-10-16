@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.pages.personal.profile.myprofile.attendtournaments.AttendTournamentsFragment">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/filter"
+        android:textSize="14sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:gravity="center"
+        android:id="@+id/txtFilter"
+        android:textColor="@color/white"
+        android:fontFamily="@font/mark_pro_bold"
+        android:layout_margin="10dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerTournamentFilter"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="@+id/txtFilter"
+        app:layout_constraintTop_toTopOf="@id/txtFilter"
+        app:layout_constraintLeft_toRightOf="@+id/txtFilter"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:listitem="@layout/item_button_filter"
+        tools:itemCount="3"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerToornaments"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/recyclerTournamentFilter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/item_recycler_last_tournaments"/>
+
+    <TextView
+        android:id="@+id/txtTournamenstWarning"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/mark_pro_bold"
+        android:gravity="center"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/txtFilter"
+        android:padding="10dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

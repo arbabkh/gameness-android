@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/user_background_unselected"
+    android:layout_margin="10dp">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imgGamer"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:scaleType="centerCrop"
+        android:adjustViewBounds="true"
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.Circle"
+        app:layout_constraintWidth_percent="0.2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:src="@drawable/welcome_bg"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtUsername"
+        app:layout_constraintLeft_toRightOf="@+id/imgGamer"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintHorizontal_bias="0"
+        tools:text="sdfsfsd"
+        android:paddingRight="10dp"
+        app:layout_constraintWidth_percent="0.5"
+        android:gravity="left|center"
+        android:fontFamily="@font/proxima_nova_bold"
+        android:textSize="16sp"
+        android:textColor="@color/white">
+
+    </TextView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/selectorView"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintWidth_percent="0.2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:text="Seç"
+            android:textColor="@color/blue"
+            android:fontFamily="@font/mark_pro_bold"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:visibility="visible"
+            android:padding="10dp"
+            android:id="@+id/btnSelect"
+            app:layout_constraintWidth_percent="0.2">
+
+        </TextView>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:id="@+id/imgSelect"
+            android:layout_margin="20dp"
+            app:srcCompat="@drawable/ic_check"
+            app:tint="@color/red"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

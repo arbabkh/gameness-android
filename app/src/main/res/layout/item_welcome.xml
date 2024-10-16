@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.pages.welcome.WelcomeAdapter">
+
+    <TextView
+        android:id="@+id/textView_welcomeTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/header1"
+        android:fontFamily="@font/mark_pro"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        android:minLines="1"
+        android:maxLines="1"
+        app:autoSizeTextType="uniform"
+        app:autoSizeMaxTextSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Title"/>
+
+    <TextView
+        android:id="@+id/textView_welcomeDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/mark_pro"
+        android:textStyle="normal"
+        android:textColor="@color/gray"
+        android:minLines="5"
+        android:maxLines="5"
+        android:textAlignment="center"
+        android:paddingBottom="5dp"
+        app:autoSizeTextType="uniform"
+        app:autoSizeMaxTextSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_welcomeTitle"
+        tools:text="Content Content Content Content Content Content Content Content Content"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

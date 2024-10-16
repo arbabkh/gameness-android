@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/splashFragment">
+
+    <include app:graph="@navigation/nav_home" />
+    <include app:graph="@navigation/nav_announcements" />
+    <include app:graph="@navigation/nav_tournaments" />
+    <include app:graph="@navigation/nav_events" />
+    <include app:graph="@navigation/nav_profile" />
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.nuevo.gameness.ui.pages.splash.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_splashFragment_to_welcomeFragment"
+            app:destination="@id/welcomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="com.nuevo.gameness.ui.pages.welcome.WelcomeFragment"
+        android:label="WelcomeFragment"
+        tools:layout="@layout/fragment_welcome" >
+        <action
+            android:id="@+id/action_welcomeFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/action_welcomeFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.nuevo.gameness.ui.pages.register.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" >
+        <action
+            android:id="@+id/action_registerFragment_to_nav_home"
+            app:destination="@id/nav_home"
+            app:popUpTo="@id/registerFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.nuevo.gameness.ui.pages.login.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_nav_home"
+            app:destination="@id/nav_home"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_loginFragment_to_forgotMyPasswordFragment"
+            app:destination="@id/forgotMyPasswordFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/forgotMyPasswordFragment"
+        android:name="com.nuevo.gameness.ui.pages.login.forgotmypassword.ForgotMyPasswordFragment"
+        android:label="fragment_forgot_my_password"
+        tools:layout="@layout/fragment_forgot_my_password" />
+    <fragment
+        android:id="@+id/premiumFragment"
+        android:name="com.nuevo.gameness.ui.pages.personal.PremiumFragment"
+        android:label="fragment_premium"
+        tools:layout="@layout/fragment_premium" />
+</navigation>

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="7dp"
+    android:paddingBottom="14dp"
+    android:paddingTop="1dp"
+    android:background="@color/tertiary_dark"
+    tools:context=".ui.pages.personal.tournaments.detail.fixture.adapter.TournamentFixtureChildAdapter">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="11dp"
+        app:cardCornerRadius="10dp"
+        app:cardBackgroundColor="@color/almost_black"
+        app:layout_constraintDimensionRatio="145:105"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <View
+                android:id="@+id/line_horizontal"
+                android:layout_width="1dp"
+                android:layout_height="0dp"
+                app:layout_constraintHorizontal_bias="0.8"
+                android:background="@color/tertiary_dark"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <View
+                android:id="@+id/line_vertical"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@color/tertiary_dark"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <TextView
+                android:id="@+id/textView_fixtureHomeScore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/subtitle2"
+                app:layout_constraintStart_toEndOf="@+id/line_horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/line_vertical"
+                tools:text="-"/>
+
+            <TextView
+                android:id="@+id/textView_fixtureAwayScore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/subtitle2"
+                app:layout_constraintStart_toEndOf="@+id/line_horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/line_vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                tools:text="-"/>
+
+            <ImageView
+                android:id="@+id/imageView_fixtureHomeName"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_margin="15dp"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:contentDescription="@string/fixture"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/line_vertical"
+                tools:src="@drawable/welcome_bg"/>
+
+            <TextView
+                android:id="@+id/textView_fixtureHomeName"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:gravity="center_vertical"
+                android:maxLines="3"
+                android:ellipsize="end"
+                style="@style/subtitle2"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginVertical="5dp"
+                app:layout_constraintStart_toEndOf="@id/imageView_fixtureHomeName"
+                app:layout_constraintEnd_toStartOf="@id/line_horizontal"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/line_vertical"
+                tools:text="Top Esports"/>
+
+            <ImageView
+                android:id="@+id/imageView_fixtureAwayName"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_margin="15dp"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:contentDescription="@string/fixture"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/line_vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                tools:src="@drawable/welcome_bg"/>
+
+            <TextView
+                android:id="@+id/textView_fixtureAwayName"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:gravity="center_vertical"
+                android:maxLines="3"
+                android:ellipsize="end"
+                style="@style/subtitle2"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginVertical="5dp"
+                app:layout_constraintStart_toEndOf="@id/imageView_fixtureAwayName"
+                app:layout_constraintEnd_toStartOf="@id/line_horizontal"
+                app:layout_constraintTop_toBottomOf="@id/line_vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                tools:text="Fnatic"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="5dp"
+        app:cardCornerRadius="5dp"
+        app:cardBackgroundColor="@color/almost_black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView_fixtureMatchNumber"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            style="@style/subtitle2"
+            android:gravity="center"
+            tools:text="1"/>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

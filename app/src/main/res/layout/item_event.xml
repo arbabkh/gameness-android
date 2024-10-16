@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    app:cardCornerRadius="10dp"
+    app:cardBackgroundColor="@color/almost_black"
+    tools:context=".ui.pages.personal.tournaments.adapter.TournamentsAdapter">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imgEvents"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:contentDescription="@string/tournaments"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            app:layout_constraintDimensionRatio="338:275"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/welcome_bg"/>
+
+        <TextView
+            android:id="@+id/txtDate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            style="@style/subtitle2"
+            android:background="@drawable/ic_rectangle_radius5"
+            android:backgroundTint="@color/white"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:paddingVertical="5dp"
+            android:paddingHorizontal="15dp"
+            android:layout_margin="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imgEvents"
+            tools:text="20 Mayıs Cumartesi"/>
+
+        <TextView
+            android:id="@+id/txtTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:fontFamily="@font/proxima_nova_bold"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginBottom="5dp"
+            app:layout_constraintStart_toStartOf="@id/imgEvents"
+            app:layout_constraintEnd_toEndOf="@id/imgEvents"
+            app:layout_constraintBottom_toTopOf="@id/txtDescription"
+            tools:text="League of Legends -TBF"/>
+
+        <TextView
+            android:id="@+id/txtDescription"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:fontFamily="@font/mark_pro"
+            android:textStyle="bold"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginBottom="25dp"
+            app:layout_constraintStart_toStartOf="@+id/imgEvents"
+            app:layout_constraintEnd_toEndOf="@+id/imgEvents"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:text="League of legends türkiye büyük finali ile karşınızda!"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

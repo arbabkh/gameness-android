@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".ui.pages.personal.tournaments.detail.tournamentroom.home.scoreboard.TournamentRoomScoreboardAdapter">
+
+    <LinearLayout
+        android:id="@+id/layout_scoreboard"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        app:layout_constraintDimensionRatio="6:1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView_order"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            style="@style/subtitle2"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textAllCaps="true"
+            tools:text="1"/>
+
+        <ImageView
+            android:id="@+id/imageView_scoreboardLogo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:paddingHorizontal="5dp"
+            tools:src="@drawable/welcome_bg"/>
+
+        <TextView
+            android:id="@+id/textView_participantName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            style="@style/subtitle2"
+            android:layout_weight="2"
+            android:layout_gravity="center"
+            android:gravity="start"
+            android:textAllCaps="true"
+            tools:text="asdasd"/>
+
+        <TextView
+            android:id="@+id/textView_OM"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            style="@style/subtitle2"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textAllCaps="true"
+            tools:text="2"/>
+
+        <TextView
+            android:id="@+id/textView_KZ"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            style="@style/subtitle2"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textAllCaps="true"
+            tools:text="3"/>
+
+        <TextView
+            android:id="@+id/textView_KY"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            style="@style/subtitle2"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            tools:text="4"/>
+
+        <TextView
+            android:id="@+id/textView_BB"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            style="@style/subtitle2"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:textAllCaps="true"
+            tools:text="5"/>
+
+        <TextView
+            android:id="@+id/textView_P"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            style="@style/subtitle2"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:textAllCaps="true"
+            tools:text="6"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/light_gray2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layout_scoreboard"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

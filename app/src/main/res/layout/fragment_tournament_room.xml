@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp"
+    tools:context=".ui.pages.personal.tournaments.detail.tournamentroom.TournamentRoomFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_joinTournamentWarning"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/ic_rectangle_radius10"
+        android:layout_marginBottom="2dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView_tournamentRoomLock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/tournament_room"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            app:srcCompat="@drawable/ic_lock"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/textView_tournamentJoin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/tournament_join"
+            android:layout_marginStart="15dp"
+            android:fontFamily="@font/proxima_nova_bold"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:layout_marginEnd="30dp"
+            app:layout_constraintStart_toEndOf="@id/imageView_tournamentRoomLock"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/imageView_tournamentRoomLock" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/tournament_join_for_access_tournament_room"
+            android:fontFamily="@font/mark_pro"
+            android:textStyle="normal"
+            android:textSize="14sp"
+            android:textColor="@color/gray"
+            android:layout_marginBottom="15dp"
+            android:layout_marginEnd="30dp"
+            app:layout_constraintStart_toStartOf="@id/textView_tournamentJoin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textView_tournamentJoin"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/button_loginToTheTournamentRoom"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_marginTop="5dp"
+        style="@style/largeButton"
+        android:text="@string/join_tournament_room"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

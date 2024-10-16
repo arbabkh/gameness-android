@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.pages.personal.tournaments.detail.tournamentroom.refereechat.RefereeChatFragment">
+
+    <ImageView
+        android:id="@+id/imageView_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_margin="10dp"
+        app:srcCompat="@drawable/ic_close"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/textView_refereeChatTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        style="@style/header3"
+        android:layout_marginEnd="20dp"
+        android:text="@string/referee_communication"
+        android:textAlignment="center"
+        app:layout_constraintStart_toEndOf="@id/imageView_close"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/imageView_close"
+        app:layout_constraintBottom_toBottomOf="@id/imageView_close"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView_refereeChat"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:paddingVertical="25dp"
+        android:paddingHorizontal="10dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView_refereeChatTitle"
+        app:layout_constraintBottom_toTopOf="@id/scv_suggestions"/>
+
+    <HorizontalScrollView
+        app:layout_constraintBottom_toTopOf="@+id/editText_inputMessage"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:id="@+id/scv_suggestions"
+        android:visibility="gone"
+        android:elevation="4dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:id="@+id/ln_suggestions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+        </LinearLayout>
+
+
+    </HorizontalScrollView>
+
+    <EditText
+        android:id="@+id/editText_inputMessage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_rectangle_radius20"
+        android:backgroundTint="@color/white"
+        android:hint="@string/write_message"
+        android:imeOptions="actionSend"
+        android:inputType="text"
+        android:paddingVertical="12dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="13dp"
+        android:layout_marginBottom="25dp"
+        android:layout_marginStart="13dp"
+        android:textColor="@color/light_gray2"
+        android:layout_marginEnd="10dp"
+        android:textColorHint="@color/light_gray2"
+        android:importantForAutofill="no"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/layout_send"
+        app:layout_constraintStart_toEndOf="@id/imageView_lightning"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_send"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/ic_oval"
+        android:backgroundTint="@color/tertiary_dark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/editText_inputMessage"
+        app:layout_constraintBottom_toBottomOf="@id/editText_inputMessage">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:padding="5dp"
+            app:srcCompat="@drawable/ic_send"
+            app:tint="@color/almost_black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/imageView_suggestions_collapse"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="12dp"
+        app:srcCompat="@drawable/ic_arrow_up"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/editText_inputMessage"
+        app:layout_constraintBottom_toBottomOf="@id/editText_inputMessage"/>
+
+    <ImageView
+        android:id="@+id/imageView_chooseFromImages"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        app:srcCompat="@drawable/attach"
+        app:layout_constraintStart_toEndOf="@id/imageView_suggestions_collapse"
+        app:layout_constraintTop_toTopOf="@id/editText_inputMessage"
+        app:layout_constraintBottom_toBottomOf="@id/editText_inputMessage"/>
+
+    <ImageView
+        android:id="@+id/imageView_lightning"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="22dp"
+        android:visibility="gone"
+        app:srcCompat="@drawable/lightning"
+        app:layout_constraintStart_toEndOf="@id/imageView_chooseFromImages"
+        app:layout_constraintTop_toTopOf="@id/editText_inputMessage"
+        app:layout_constraintBottom_toBottomOf="@id/editText_inputMessage"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

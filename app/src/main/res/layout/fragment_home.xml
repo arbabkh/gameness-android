@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+    android:id="@+id/swipe_refresh_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:layout_height="wrap_content">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.pages.personal.home.HomeFragment">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingHorizontal="15dp">
+
+            <TextView
+                android:id="@+id/textView_homeTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/header1"
+                android:layout_marginTop="15dp"
+                android:text="@string/home"
+                android:textColor="@color/white"
+                android:textAllCaps="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <ImageView
+                android:id="@+id/imageView_homeCalendar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/calendar"
+                android:padding="4dp"
+                app:tint="@color/blue"
+                app:srcCompat="@drawable/ic_calendar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/textView_homeTitle"
+                app:layout_constraintBottom_toBottomOf="@id/textView_homeTitle"/>
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/viewPager2_homeAnnouncements"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="15dp"
+                app:layout_constraintDimensionRatio="1.50:1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textView_homeTitle"/>
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabLayout_homeAnnouncements"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginBottom="15dp"
+                android:backgroundTint="@android:color/transparent"
+                app:tabBackground="@drawable/tab_pager_selector"
+                app:tabIndicatorHeight="0dp"
+                app:layout_constraintStart_toStartOf="@+id/viewPager2_homeAnnouncements"
+                app:layout_constraintEnd_toEndOf="@+id/viewPager2_homeAnnouncements"
+                app:layout_constraintBottom_toBottomOf="@+id/viewPager2_homeAnnouncements"/>
+
+            <TextView
+                android:id="@+id/textView_homeTournamentsTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/header2"
+                android:layout_marginTop="30dp"
+                android:text="@string/tournaments"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/viewPager2_homeAnnouncements"/>
+
+            <TextView
+                android:id="@+id/textView_seeAllTournaments"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/see_all"
+                android:textColor="@color/blue"
+                android:drawablePadding="5dp"
+                android:paddingVertical="14dp"
+                android:paddingStart="14dp"
+                android:paddingEnd="1dp"
+                app:drawableEndCompat="@drawable/ic_right_arrow"
+                app:drawableTint="@color/blue"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/textView_homeTournamentsTitle"
+                app:layout_constraintBottom_toBottomOf="@+id/textView_homeTournamentsTitle"/>
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/viewPager2_homeTournaments"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="15dp"
+                app:layout_constraintDimensionRatio="1.90:1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textView_homeTournamentsTitle"/>
+
+            <!-- Horizontal Buttons Layout -->
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/marketplace_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                app:layout_constraintTop_toBottomOf="@id/viewPager2_homeTournaments"
+                tools:layout_editor_absoluteX="15dp">
+
+                <!-- Horizontal Layout for the Buttons -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal"
+                    android:weightSum="3"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <!-- Marketplace Button -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageButton
+                            android:id="@+id/button_marketplace"
+                            style="?android:attr/buttonBarButtonStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="8dp"
+                            android:contentDescription="@string/marketplace"
+                            android:src="@drawable/marketplace" />
+
+                        <TextView
+                            android:id="@+id/text_marketplace"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:gravity="center"
+                            android:text="@string/marketplace"
+                            android:textColor="@color/white" />
+                    </LinearLayout>
+
+                    <!-- Lockness Button -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageButton
+                            android:id="@+id/button_lockness"
+                            style="?android:attr/buttonBarButtonStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="8dp"
+                            android:contentDescription="@string/lockness"
+                            android:src="@drawable/lockness" />
+
+                        <TextView
+                            android:id="@+id/text_lockness"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:gravity="center"
+                            android:text="@string/lockness"
+                            android:textColor="@color/white" />
+                    </LinearLayout>
+
+                    <!-- Prediction Button -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageButton
+                            android:id="@+id/button_prediction"
+                            style="?android:attr/buttonBarButtonStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="8dp"
+                            android:contentDescription="@string/prediction"
+                            android:src="@drawable/prediction" />
+
+                        <TextView
+                            android:id="@+id/text_prediction"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:gravity="center"
+                            android:text="@string/prediction"
+                            android:textColor="@color/white" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/layout_premiumBuy"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="20dp"
+                app:cardCornerRadius="10dp"
+                app:layout_constraintDimensionRatio="4:1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/marketplace_layout">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/imageView_premiumBuy"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:background="@drawable/ic_rectangle_radius10"
+                        android:contentDescription="@string/premium_buy_all_tournaments_join"
+                        app:srcCompat="@drawable/premium_buy"
+                        android:scaleType="centerCrop"
+                        android:adjustViewBounds="true"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/header2"
+                        android:layout_marginStart="35dp"
+                        android:layout_marginEnd="5dp"
+                        android:text="@string/premium_buy_all_tournaments_join"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/textView_tryPremium"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"/>
+
+                    <TextView
+                        android:id="@+id/textView_tryPremium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/try_text"
+                        style="@style/subtitle2"
+                        android:background="@drawable/ic_rectangle_radius10"
+                        android:backgroundTint="@color/blue"
+                        android:layout_marginEnd="25dp"
+                        android:paddingHorizontal="15dp"
+                        android:paddingVertical="5dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/textView_homeTrainingTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/header2"
+                android:textAllCaps="true"
+                android:layout_marginTop="20dp"
+                android:text="@string/trainings"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layout_premiumBuy"/>
+
+            <TextView
+                android:id="@+id/textView_seeAllTraining"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/see_all"
+                android:textColor="@color/blue"
+                android:drawablePadding="5dp"
+                android:paddingVertical="14dp"
+                android:paddingStart="14dp"
+                android:paddingEnd="1dp"
+                app:drawableEndCompat="@drawable/ic_right_arrow"
+                app:drawableTint="@color/blue"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/textView_homeTrainingTitle"
+                app:layout_constraintBottom_toBottomOf="@+id/textView_homeTrainingTitle"/>
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/viewPager2_homeTrainings"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="10dp"
+                app:layout_constraintDimensionRatio="338:85"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textView_homeTrainingTitle"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

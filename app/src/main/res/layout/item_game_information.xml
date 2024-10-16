@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingVertical="15dp"
+    tools:context=".ui.pages.register.gameinformation.GameInformationAdapter">
+
+    <TextView
+        android:id="@+id/textView_gameUniqueId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/header3"
+        android:textColor="@color/white"
+        android:textAllCaps="true"
+        tools:text="Game"/>
+
+    <EditText
+        android:id="@+id/editText_gameUniqueId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="50dp"
+        style="@style/editText"
+        android:inputType="text"
+        android:autofillHints="name"
+        android:layout_marginTop="10dp"/>
+
+</LinearLayout>

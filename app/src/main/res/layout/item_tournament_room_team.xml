@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:background="@drawable/ic_rectangle_radius10"
+    tools:context=".ui.pages.personal.tournaments.detail.tournamentroom.home.players.adapter.TournamentRoomTeamAdapter">
+
+    <TextView
+        android:id="@+id/textView_tournamentRoomTeamName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        style="@style/header3"
+        android:padding="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="TEAM QRAGE"/>
+
+    <ImageView
+        android:id="@+id/imageView_icForOpenList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:contentDescription="@string/tournament_room"
+        app:srcCompat="@drawable/ic_bottom_arrow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/textView_tournamentRoomTeamName"
+        app:layout_constraintBottom_toBottomOf="@id/textView_tournamentRoomTeamName"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView_tournamentRoomTeam"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginBottom="15dp"
+        android:visibility="gone"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView_tournamentRoomTeamName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:listitem="@layout/item_tournament_room_players"
+        tools:itemCount="5"
+        tools:visibility="visible"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

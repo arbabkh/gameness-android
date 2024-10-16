@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.pages.personal.profile.myteam.teaminfo.TeamInfoFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="5dp">
+
+        <TextView
+            android:id="@+id/txtTeamTournaments"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            style="@style/header3"
+            android:paddingVertical="10dp"
+            android:paddingHorizontal="5dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/last_confirmed_tournament"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/viewpagerTeamTournaments"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="338:167"
+            app:layout_constraintTop_toBottomOf="@id/txtTeamTournaments"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:listitem="@layout/item_pager_last_tournaments"/>
+
+        <TextView
+            android:id="@+id/txtTeamTournamentsWarning"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            style="@style/header3"
+            android:text="@string/not_found_tournaments"
+            android:visibility="gone"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:padding="20dp"
+            app:layout_constraintStart_toStartOf="@id/viewpagerTeamTournaments"
+            app:layout_constraintEnd_toEndOf="@id/viewpagerTeamTournaments"
+            app:layout_constraintTop_toTopOf="@id/viewpagerTeamTournaments"
+            app:layout_constraintBottom_toBottomOf="@id/viewpagerTeamTournaments"/>
+
+        <TextView
+            android:id="@+id/txtAwards"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            style="@style/header3"
+            android:paddingVertical="10dp"
+            android:paddingHorizontal="5dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/recent_achievements"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/viewpagerTeamTournaments"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerAwards"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtAwards"
+            tools:listitem="@layout/item_all_awards"
+            tools:itemCount="3"/>
+
+        <TextView
+            android:id="@+id/txtAwardsWarning"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            style="@style/header3"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:text="@string/not_found_achievement"
+            android:visibility="gone"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="40dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtAwards"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

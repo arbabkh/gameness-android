@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="verify_phone_number">Verify phone number</string>
+    <string name="enter_phone_number">Enter phone number</string>
+    <string name="enter_otp_number">Enter otp number</string>
+    <string name="marketplace">Marketplace</string>
+    <string name="lockness">Lockness</string>
+    <string name="prediction">Prediction</string>
+</resources>

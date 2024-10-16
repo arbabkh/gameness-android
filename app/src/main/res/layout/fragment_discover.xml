@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.pages.personal.profile.myprofile.discover.DiscoverFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingHorizontal="10dp"
+        android:paddingTop="15dp">
+
+        <TextView
+            android:id="@+id/txtUserAwards"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/header2"
+            android:paddingHorizontal="5dp"
+            android:text="@string/recent_achievements"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/btnSeeAllAwards"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/see_all"
+            android:textColor="@color/blue"
+            android:drawablePadding="5dp"
+            android:paddingHorizontal="5dp"
+            app:drawableEndCompat="@drawable/ic_right_arrow"
+            app:drawableTint="@color/blue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/txtUserAwards"
+            app:layout_constraintBottom_toBottomOf="@+id/txtUserAwards"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/userAwards"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/txtUserAwards">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerUserAwards"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:paddingVertical="10dp"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                app:layout_constraintDimensionRatio="2:1"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/item_user_awards"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:id="@+id/txtUserAwardsWarning"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/header3"
+                android:text="@string/not_found_achievement"
+                android:gravity="center"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginVertical="30dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/txtLastTournament"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/header2"
+            android:text="@string/last_tournaments"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/userAwards"/>
+
+        <TextView
+            android:id="@+id/btnSeeAllTournament"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/see_all"
+            android:textColor="@color/blue"
+            android:drawablePadding="5dp"
+            android:paddingHorizontal="5dp"
+            app:drawableEndCompat="@drawable/ic_right_arrow"
+            app:drawableTint="@color/blue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/txtLastTournament"
+            app:layout_constraintBottom_toBottomOf="@+id/txtLastTournament"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/lastTournaments"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/txtLastTournament">
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/viewPagerLastTournaments"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:paddingVertical="10dp"
+                android:visibility="gone"
+                app:layout_constraintDimensionRatio="338:190"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:id="@+id/txtLastTournamentsWarning"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/header3"
+                android:text="@string/not_found_tournaments"
+                android:gravity="center"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginVertical="30dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/txtSelectedGames"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/header2"
+            android:layout_marginTop="20dp"
+            android:text="@string/selected_games"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lastTournaments"/>
+
+        <TextView
+            android:id="@+id/btnSeeAllGames"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/see_all"
+            android:textColor="@color/blue"
+            android:drawablePadding="5dp"
+            android:paddingHorizontal="5dp"
+            app:drawableEndCompat="@drawable/ic_right_arrow"
+            app:drawableTint="@color/blue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/txtSelectedGames"
+            app:layout_constraintBottom_toBottomOf="@+id/txtSelectedGames"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/selectedGames"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/txtSelectedGames">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerSelectedGames"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingVertical="10dp"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:listitem="@layout/item_choose_game"/>
+
+            <TextView
+                android:id="@+id/txtSelectedGamesWarning"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/header3"
+                android:text="@string/not_found_game"
+                android:gravity="center"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginVertical="30dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

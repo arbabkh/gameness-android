@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp"
+    tools:context=".ui.pages.personal.tournaments.detail.tournamentroom.playerchat.adapter.PlayerChatAdapter">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imageView_player"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        android:adjustViewBounds="true"
+        android:layout_margin="10dp"
+        app:layout_constraintDimensionRatio="1:1"
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.Circle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/layout_playerChatInfo"
+        app:layout_constraintBottom_toBottomOf="@id/layout_playerChatInfo"
+        tools:src="@drawable/welcome_bg"/>
+
+    <LinearLayout
+        android:id="@+id/layout_playerChatInfo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:layout_gravity="center"
+        app:layout_constraintStart_toEndOf="@id/imageView_player"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:id="@+id/textView_userName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/header3"
+            tools:text="1234Burak"/>
+
+        <TextView
+            android:id="@+id/textView_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/subtitle2"
+            tools:text="Acele Et!"/>
+
+        <TextView
+            android:id="@+id/textView_messageDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/small"
+            android:gravity="end"
+            tools:text="27/02/2022"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

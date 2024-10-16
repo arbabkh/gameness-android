@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_settings"
+    app:startDestination="@id/settingsFragment">
+
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.nuevo.gameness.ui.pages.personal.profile.settings.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings">
+        <action
+            android:id="@+id/action_settingsFragment_to_personalInfoFragment"
+            app:destination="@id/personalInfoFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_passwordSettingsFragment"
+            app:destination="@id/passwordSettingsFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_epostaSettingsFragment"
+            app:destination="@id/epostaSettingsFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_changeUserNameFragment"
+            app:destination="@id/changeUserNameFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_gameSettingsFragment"
+            app:destination="@id/gameSettingsFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_iconChangeFragment"
+            app:destination="@id/iconChangeFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_inviteExternalUserFragment"
+            app:destination="@id/inviteExternalUserFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_teamInfoFragment"
+            app:destination="@id/teamSettingsFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_gamerSettingsFragment"
+            app:destination="@id/gamerSettingsFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_invitedGamersFragment"
+            app:destination="@id/invitedGamersFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_teamSettingsFragment"
+            app:destination="@id/teamSettingsFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_teamInvitationsFragment"
+            app:destination="@id/teamInvitationsFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_screenshotsFragment"
+            app:destination="@id/screenshotsFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_verifyPhoneNumberFragment"
+            app:destination="@id/verifyPhoneNumberFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_verifyEmailFragment"
+            app:destination="@id/verifyEmailFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/personalInfoFragment"
+        android:name="com.nuevo.gameness.ui.pages.personal.profile.settings.personalinfo.PersonalInfoFragment"
+        android:label="fragment_personal_info"
+        tools:layout="@layout/fragment_personal_info">
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/passwordSettingsFragment"
+        android:name="com.nuevo.gameness.ui.pages.personal.profile.settings.password.PasswordSettingsFragment"
+        android:label="fragment_password"
+        tools:layout="@layout/fragment_password_settings">
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/epostaSettingsFragment"
+        android:name="com.nuevo.gameness.ui.pages.personal.profile.settings.eposta.EpostaSettingsFragment"
+        android:label="fragment_eposta_settings"
+        tools:layout="@layout/fragment_eposta_settings">
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/changeUserNameFragment"
+        android:name="com.nuevo.gameness.ui.pages.personal.profile.settings.username.ChangeUserNameFragment"
+        tools:layout="@layout/fragment_change_username"
+        android:label="fragment_change_username">
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/gameSettingsFragment"
+        android:name="com.nuevo.gameness.ui.pages.personal.profile.settings.game.GameSettingsFragment"
+        android:label="fragment_game_settings"
+        tools:layout="@layout/fragment_game_settings">
+
+        <action
+            android:id="@+id/action_gameSettingsFragment_to_gameInformationFragment"
+            app:destination="@id/gameInformationFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/iconChangeFragment"
+        android:name="com.nuevo.gameness.ui.pages.personal.profile.settings.avatar.IconChangeFragment"
+        tools:layout="@layout/fragment_change_icon"
+        android:label="fragment_change_icon">
+    </fragment>
+
+    <fragment
+        android:id="@+id/inviteExternalUserFragment"
+        android:name="com.nuevo.gameness.ui.pages.personal.profile.settings.gamer.InviteExternalUserFragment"
+        tools:layout="@layout/fragment_invite_external_user"
+        android:label="fragment_invite_external_user">
+
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/teamSettingsFragment"
+        android:name="com.nuevo.gameness.ui.pages.personal.profile.settings.teamsettings.TeamSettingsFragment"
+        android:label="fragment_team_info"
+        tools:layout="@layout/fragment_team_settings">
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/gamerSettingsFragment"
+        android:name="com.nuevo.gameness.ui.pages.personal.profile.settings.gamer.GamerSettingsFragment"
+        tools:layout="@layout/fragment_gamer_settings"
+        android:label="fragment_gamer_settings">
+
+
+        <action
+            android:id="@+id/action_gamerSettingsFragment_to_inviteUserFragment"
+            app:destination="@id/inviteUserFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/invitedGamersFragment"
+        android:name="com.nuevo.gameness.ui.pages.personal.profile.settings.invited.InvitedGamersFragment"
+        android:label="fragment_invited_gamers"
+        tools:layout="@layout/fragment_invited_gamers">
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/inviteUserFragment"
+        android:name="com.nuevo.gameness.ui.pages.personal.profile.settings.gamer.InviteUserFragment"
+        tools:layout="@layout/fragment_invite_user"
+        android:label="fragment_invite_user">
+
+    </fragment>
+    <fragment
+        android:id="@+id/teamInvitationsFragment"
+        android:name="com.nuevo.gameness.ui.pages.personal.profile.settings.teaminvitations.TeamInvitationsFragment"
+        tools:layout="@layout/fragment_team_invitations"
+        android:label="TeamInvitationsFragment" />
+
+    <fragment
+        android:id="@+id/screenshotsFragment"
+        android:name="com.nuevo.gameness.ui.pages.personal.profile.settings.screenshots.ScreenShotsFragment"
+        tools:layout="@layout/fragment_screenshots"
+        android:label="ScreenshotsFragment" />
+    <fragment
+        android:id="@+id/gameInformationFragment"
+        android:name="com.nuevo.gameness.ui.pages.register.gameinformation.GameInformationFragment"
+        android:label="fragment_game_information"
+        tools:layout="@layout/fragment_game_information" >
+        <argument
+            android:name="selected_games"
+            app:argType="com.nuevo.gameness.data.model.games.GameListItem[]"
+            app:nullable="true"
+            android:defaultValue="@null" />
+    </fragment>
+    <fragment
+        android:id="@+id/verifyPhoneNumberFragment"
+        android:name="com.nuevo.gameness.ui.pages.verifyphone.VerifyPhoneNumberFragment"
+        android:label="fragment_verify_phone_number"
+        tools:layout="@layout/fragment_verify_phone_number" />
+    <fragment
+        android:id="@+id/verifyEmailFragment"
+        android:name="com.nuevo.gameness.ui.pages.verifyemail.VerifyEmailFragment"
+        android:label="VerifyEmailFragment" />
+
+
+</navigation>

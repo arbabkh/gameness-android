@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.pages.personal.profile.myprofile.MyProfileFragment">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imgProfile"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        android:adjustViewBounds="true"
+        android:layout_margin="25dp"
+        app:layout_constraintWidth_percent="0.3"
+        app:layout_constraintDimensionRatio="1:1"
+        app:srcCompat="@drawable/default_profile"
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.Circle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/txtName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        style="@style/header3"
+        android:paddingHorizontal="10dp"
+        app:layout_constraintStart_toEndOf="@id/imgProfile"
+        app:layout_constraintEnd_toStartOf="@id/txtTeamTitle"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/layout_team"
+        tools:text="Brcevik"/>
+
+    <TextView
+        android:id="@+id/txtTeamTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        style="@style/subtitle2"
+        android:background="@drawable/ic_rectangle_radius5"
+        android:backgroundTint="@color/purpleish_blue"
+        android:paddingHorizontal="10dp"
+        android:paddingTop="3dp"
+        android:paddingBottom="4dp"
+        android:text="@string/team_captain"
+        android:gravity="center"
+        android:textAllCaps="true"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintStart_toEndOf="@id/txtName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/txtName"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_team"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="10dp"
+        app:layout_constraintStart_toEndOf="@id/imgProfile"
+        app:layout_constraintTop_toBottomOf="@id/txtName"
+        app:layout_constraintBottom_toTopOf="@id/tabs">
+
+        <TextView
+            android:id="@+id/txtTeam"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/subtitle2"
+            android:text="@string/team"
+            android:textColor="@color/gray"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/txtTeamName"/>
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imgTeamLogo"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            android:layout_marginVertical="5dp"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/txtTeamName"
+            app:layout_constraintBottom_toBottomOf="@id/txtTeamName"
+            tools:src="@drawable/welcome_bg"/>
+
+        <TextView
+            android:id="@+id/txtTeamName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:padding="5dp"
+            android:fontFamily="@font/mark_pro_heavy"
+            app:layout_constraintStart_toEndOf="@id/imgTeamLogo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:text="dffsd"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.nuevo.gameness.utils.CustomTabLayout
+        android:id="@+id/tabs"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:layout_marginTop="25dp"
+        android:paddingHorizontal="15dp"
+        app:tabTextColor="@color/gray"
+        app:tabSelectedTextColor="@color/blue"
+        app:tabIndicatorColor="@color/blue"
+        app:tabMode="scrollable"
+        app:tabTextAppearance="@style/ChildTabLayoutTextAppearance"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgProfile"/>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPagerProfile"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tabs"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

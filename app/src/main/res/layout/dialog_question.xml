@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="40dp"
+        android:padding="20dp"
+        android:background="@drawable/ic_rectangle_radius10"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView_question"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            style="@style/header3"
+            android:gravity="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Evet mi Hayır mı?"/>
+
+        <TextView
+            android:id="@+id/textView_negative"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/no"
+            android:background="@drawable/ic_rectangle_radius5"
+            android:backgroundTint="@color/almost_black"
+            android:paddingTop="4dp"
+            android:paddingBottom="6dp"
+            android:gravity="center"
+            android:layout_margin="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/textView_positive"
+            app:layout_constraintTop_toBottomOf="@id/textView_question"/>
+
+        <TextView
+            android:id="@+id/textView_positive"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/yes"
+            android:background="@drawable/ic_rectangle_radius5"
+            android:backgroundTint="@color/red"
+            android:paddingTop="4dp"
+            android:paddingBottom="6dp"
+            android:gravity="center"
+            android:layout_margin="20dp"
+            app:layout_constraintStart_toEndOf="@id/textView_negative"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textView_question"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.pages.login.LoginFragment">
+
+    <TextView
+        android:id="@+id/txtLogin"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/sign_in"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:padding="20dp"
+        android:fontFamily="@font/mark_pro_bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/username"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/username"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:padding="5dp"
+        android:fontFamily="@font/mark_pro_bold"
+        app:layout_constraintVertical_bias="0.1"
+        app:layout_constraintWidth_percent="0.8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtLogin"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <EditText
+        android:id="@+id/editText_userName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        style="@style/editText"
+        android:autofillHints="username"
+        android:background="@drawable/ic_rectangle_radius10"
+        android:hint="@string/username"
+        android:inputType="text"
+        android:paddingVertical="20dp"
+        android:layout_marginTop="10dp"
+        android:textColorHint="#8C8C8C"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintWidth_percent="0.8"
+        app:layout_constraintTop_toBottomOf="@+id/username"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/password"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/password"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:layout_marginTop="20dp"
+        android:padding="5dp"
+        android:fontFamily="@font/mark_pro_bold"
+        app:layout_constraintWidth_percent="0.8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editText_userName"/>
+    <!-- 6z=$h42L -->
+
+    <EditText
+        android:id="@+id/editText_password"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        style="@style/editText"
+        android:paddingVertical="20dp"
+        android:background="@drawable/ic_rectangle_radius10"
+        android:inputType="textPassword"
+        android:autofillHints="password"
+        android:hint="@string/password"
+        android:textColorHint="#8C8C8C"
+        android:textColor="@color/white"
+        android:layout_marginTop="10dp"
+        android:drawableEnd="@drawable/baseline_visibility_24"
+        app:layout_constraintWidth_percent="0.8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/password" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="-5dp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/checkRemember"
+        android:text="@string/remember_me"
+        android:textColor="@color/white"
+        android:fontFamily="@font/mark_pro_bold"
+        app:layout_constraintTop_toBottomOf="@+id/editText_password"
+        app:layout_constraintStart_toStartOf="@+id/editText_password"/>
+
+    <Button
+        android:id="@+id/button_login"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        style="@style/largeButton"
+        android:layout_marginTop="30dp"
+        android:text="@string/sign_in"
+        app:layout_constraintWidth_percent="0.8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkRemember" />
+
+    <TextView
+        android:id="@+id/textView_forgotMyPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/header3"
+        android:text="@string/forgot_my_password_underline"
+        android:padding="5dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toStartOf="@id/button_login"
+        app:layout_constraintEnd_toEndOf="@id/button_login"
+        app:layout_constraintTop_toBottomOf="@id/button_login"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

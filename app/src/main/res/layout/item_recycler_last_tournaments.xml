@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardBackgroundColor="@color/almost_black"
+    app:cardCornerRadius="10dp"
+    tools:context=".ui.pages.personal.profile.adapter.AllTournamentsAdapter">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imageView_homeTournament"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:contentDescription="@string/announcements"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            app:layout_constraintDimensionRatio="338:167"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/welcome_bg"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintHeight_percent="0.34"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <com.nuevo.gameness.utils.BottomCropImage
+                android:id="@+id/imageView_blurringTournament"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/tournaments"
+                tools:src="@color/tertiary_dark"/>
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/imageView_homeTournamentIcon"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="15dp"
+                android:contentDescription="@string/tournament"
+                android:scaleType="fitXY"
+                android:adjustViewBounds="true"
+                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.SelectedCornerAllRadius10"
+                app:layout_constraintHeight_percent="0.6"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                tools:src="@drawable/welcome_bg"/>
+
+            <TextView
+                android:id="@+id/button_homeTournamentsJoin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/subtitle2"
+                android:layout_marginEnd="15dp"
+                android:textAllCaps="true"
+                android:background="@drawable/ic_rectangle_radius20"
+                android:backgroundTint="@color/blue"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="5dp"
+                app:cornerRadius="15dp"
+                app:backgroundTint="@color/blue"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                tools:text="@string/active"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:orientation="vertical"
+                app:layout_constraintStart_toEndOf="@id/imageView_homeTournamentIcon"
+                app:layout_constraintEnd_toStartOf="@id/button_homeTournamentsJoin"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+                <TextView
+                    android:id="@+id/textView_homeTournamentName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:maxLines="1"
+                    app:autoSizeTextType="uniform"
+                    app:autoSizeMaxTextSize="14sp"
+                    tools:text="Fifa Altın Kupa Turnuvası" />
+
+                <TextView
+                    android:id="@+id/textView_homeTournamentDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/small"
+                    android:layout_marginTop="2dp"
+                    android:textColor="@color/white"
+                    tools:text="27.03.2021"/>
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

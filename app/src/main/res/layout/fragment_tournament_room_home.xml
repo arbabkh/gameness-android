@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.pages.personal.tournaments.detail.tournamentroom.home.TournamentRoomHomeFragment">
+
+    <ImageView
+        android:id="@+id/imageView_tournamentRoomHome"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/tournaments"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.4"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/welcome_bg"/>
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/almost_black"
+        app:layout_constraintStart_toStartOf="@id/imageView_tournamentRoomHome"
+        app:layout_constraintEnd_toEndOf="@id/imageView_tournamentRoomHome"
+        app:layout_constraintTop_toBottomOf="@+id/textView_hyphen"
+        app:layout_constraintBottom_toBottomOf="@id/imageView_tournamentRoomHome"/>
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/bg_gradient"
+        app:layout_constraintTop_toTopOf="@id/imageView_tournamentRoomHome"
+        app:layout_constraintEnd_toEndOf="@id/imageView_tournamentRoomHome"
+        app:layout_constraintStart_toStartOf="@id/imageView_tournamentRoomHome"
+        app:layout_constraintBottom_toBottomOf="@id/textView_hyphen"/>
+
+    <ImageView
+        android:id="@+id/imageView_tournamentRoomHomePlatform"
+        android:layout_width="43dp"
+        android:layout_height="22dp"
+        android:contentDescription="@string/tournament_room"
+        android:scaleType="fitXY"
+        android:layout_marginBottom="15dp"
+        android:adjustViewBounds="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/frameLayout_countDown"
+        tools:src="@color/blue"/>
+
+    <ImageView
+        android:id="@+id/imageView_refereeChat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/tournament_room"
+        android:padding="20dp"
+        app:srcCompat="@drawable/referee_chat"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/textView_tournamentYourNextMatch"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        style="@style/header3"
+        android:layout_marginTop="-20dp"
+        android:textAlignment="center"
+        android:text="@string/your_next_match"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageView_refereeChat"/>
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imageView_tournamentYourNextMatchHome"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="5dp"
+        android:contentDescription="@string/tournaments"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.Circle"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/textView_hyphen"
+        app:layout_constraintTop_toBottomOf="@id/textView_tournamentYourNextMatch"
+        app:layout_constraintBottom_toTopOf="@id/textView_tournamentYourNextMatchHome"
+        tools:src="@drawable/default_profile"/>
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imageView_tournamentYourNextMatchAway"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="5dp"
+        android:contentDescription="@string/tournaments"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.Circle"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/textView_hyphen"
+        app:layout_constraintTop_toBottomOf="@id/textView_tournamentYourNextMatch"
+        app:layout_constraintBottom_toTopOf="@id/textView_tournamentYourNextMatchAway"
+        tools:src="@drawable/default_profile"/>
+
+    <TextView
+        android:id="@+id/textView_hyphen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/header1"
+        android:text=" - "
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/imageView_tournamentYourNextMatchHome"
+        app:layout_constraintBottom_toBottomOf="@id/imageView_tournamentYourNextMatchHome"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/textView_tournamentYourNextMatchHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/header3"
+        android:layout_marginTop="2dp"
+        app:layout_constraintTop_toTopOf="@id/imageView_tournamentRoomHomePlatform"
+        app:layout_constraintBottom_toBottomOf="@id/imageView_tournamentRoomHomePlatform"
+        app:layout_constraintStart_toStartOf="@id/imageView_tournamentYourNextMatchHome"
+        app:layout_constraintEnd_toEndOf="@id/imageView_tournamentYourNextMatchHome"
+        tools:text="QRAGE"/>
+
+    <TextView
+        android:id="@+id/textView_tournamentYourNextMatchAway"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/header3"
+        android:layout_marginTop="2dp"
+        app:layout_constraintTop_toTopOf="@id/imageView_tournamentRoomHomePlatform"
+        app:layout_constraintBottom_toBottomOf="@id/imageView_tournamentRoomHomePlatform"
+        app:layout_constraintStart_toStartOf="@id/imageView_tournamentYourNextMatchAway"
+        app:layout_constraintEnd_toEndOf="@id/imageView_tournamentYourNextMatchAway"
+        tools:text="TEAM C"/>
+
+    <FrameLayout
+        android:id="@+id/frameLayout_countDown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/tabLayout_tournamentRoomHome">
+
+        <include
+            android:id="@+id/layout_countDown"
+            layout="@layout/layout_count_down"
+           />
+
+        <include
+            android:id="@+id/layout_availabilityMessage"
+            layout="@layout/layout_availability_message"
+             />
+
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/imageView_chat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:contentDescription="@string/tournament_room"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/frameLayout_countDown"
+        app:layout_constraintStart_toEndOf="@id/frameLayout_countDown"
+        app:layout_constraintTop_toTopOf="@id/frameLayout_countDown"
+        app:srcCompat="@drawable/chat"
+        app:tint="@color/white"
+        tools:visibility="invisible" />
+
+    <com.nuevo.gameness.utils.CustomTabLayout
+        android:id="@+id/tabLayout_tournamentRoomHome"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        app:tabMode="scrollable"
+        android:background="@android:color/transparent"
+        app:tabTextAppearance="@style/ChildTabLayoutTextAppearance"
+        app:tabSelectedTextColor="@color/blue"
+        app:tabTextColor="@color/light_gray"
+        app:tabIndicatorColor="@color/blue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_tournamentRoomHome"/>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager2_tournamentRoomHome"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tabLayout_tournamentRoomHome"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

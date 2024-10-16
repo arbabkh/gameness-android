@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.pages.register.gameinformation.GameInformationFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="vertical">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:id="@+id/header_layout"
+
+            android:layout_height="wrap_content">
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/back"
+                android:src="@drawable/ic_left_arrow"
+                android:id="@+id/ic_back"
+                android:padding="10dp"
+                android:layout_margin="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/header1"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toEndOf="@id/ic_back"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:text="@string/game_information"
+                android:textAllCaps="true"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/textview_title2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/header2"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toEndOf="@id/ic_back"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:text="@string/game_information"
+            android:textAllCaps="true"/>
+
+
+        <TextView
+            android:id="@+id/textview_discord_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/header3"
+            android:layout_margin="8dp"
+            android:textColor="@color/white"
+            android:layout_marginTop="15dp"
+            android:text="@string/discord_id"
+            android:textAllCaps="true"/>
+
+        <EditText
+            android:id="@+id/editText_discordId"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            style="@style/editText"
+            android:inputType="text"
+            android:autofillHints="name"
+            android:layout_marginTop="10dp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView_selectedGameIds"
+            android:layout_width="match_parent"
+            android:layout_margin="8dp"
+            android:layout_height="wrap_content"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/item_game_information"
+            tools:itemCount="2"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_gameInformationNext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            style="@style/largeButton"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="25dp"
+            android:text="@string/next"/>
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="135dp"
+            android:layout_height="5dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/ic_rectangle_radius10"
+            android:backgroundTint="@color/white"/>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

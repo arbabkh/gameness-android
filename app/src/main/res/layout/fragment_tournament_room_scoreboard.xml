@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.pages.personal.tournaments.detail.tournamentroom.home.scoreboard.TournamentRoomScoreboardFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="15dp"
+        android:paddingHorizontal="15dp">
+
+        <LinearLayout
+            android:id="@+id/layout_scoreboardInfo"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:background="@drawable/ic_rectangle_radius5"
+            android:backgroundTint="@color/yellow"
+            app:layout_constraintDimensionRatio="10:1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                style="@style/subtitle2"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/order"
+                android:textAllCaps="true"
+                android:textColor="@color/black"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:paddingHorizontal="5dp"/>
+
+            <TextView
+                android:id="@+id/textView_tournamentParticipationType"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                style="@style/subtitle2"
+                android:layout_weight="2"
+                android:textAlignment="textStart"
+                android:textAllCaps="true"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                style="@style/subtitle2"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/om"
+                android:textAllCaps="true"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                style="@style/subtitle2"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/kz"
+                android:textAllCaps="true"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                style="@style/subtitle2"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/ky"
+                android:textAllCaps="true"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                style="@style/subtitle2"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/bb"
+                android:textAllCaps="true"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                style="@style/subtitle2"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/p"
+                android:textAllCaps="true"
+                android:textColor="@color/black"/>
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView_scoreboard"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layout_scoreboardInfo"
+            tools:listitem="@layout/item_tournament_room_scoreboard"
+            tools:itemCount="5"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>
